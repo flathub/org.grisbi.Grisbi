@@ -58,10 +58,14 @@ modules:
       - type: archive
         url: http://downloads.sourceforge.net/project/grisbi/grisbi%20stable/3.0.x/3.0.3/grisbi-3.0.3.tar.bz2
         sha256: 3bc1c630a758a4b5a76116015002a9b477b495203110481ff41f3674c1df4797
+      - type: file
+        path: metainfo.patch
     post-install:
       - mv /app/share/metainfo/grisbi.metainfo.xml /app/share/metainfo/org.grisbi.Grisbi.metainfo.xml
       # https://github.com/grisbi/grisbi/pull/73
       - sed -i -e 's,<_,<,g;s,</_,</,g' /app/share/metainfo/org.grisbi.Grisbi.metainfo.xml
       - sed -i -e '/<description>/i\  <developer_name>Grisbi Team</developer_name>' /app/share/metainfo/org.grisbi.Grisbi.metainfo.xml
+      # Add the latest release
+      - patch /app/share/metainfo/org.grisbi.Grisbi.metainfo.xml < metainfo.patch
       - mv /app/share/mime/packages/grisbi.xml /app/share/mime/packages/org.grisbi.Grisbi.xml
       - mv /app/share/icons/hicolor/scalable/mimetypes/application-x-grisbi.svg /app/share/icons/hicolor/scalable/mimetypes/org.grisbi.Grisbi.application-x-grisbi.svg
