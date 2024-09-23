@@ -10,8 +10,9 @@ rename-desktop-file: grisbi.desktop
 rename-icon: grisbi
 
 finish-args:
-  - --socket=wayland
-  - --socket=fallback-x11
+  - --socket=x11
+  # - --socket=wayland
+  # - --socket=fallback-x11
   - --share=ipc
   - --device=dri
   # Ideally we would only need access to xdg-documents and xdg-download, but
