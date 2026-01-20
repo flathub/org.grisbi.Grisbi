@@ -1,12 +1,11 @@
 app-id: org.grisbi.Grisbi
 runtime: org.gnome.Platform
-runtime-version: "48"
+runtime-version: "49"
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.gnome.Sdk.Locale
 command: grisbi
 
-rename-desktop-file: grisbi.desktop
 rename-icon: grisbi
 
 finish-args:
@@ -30,8 +29,8 @@ modules:
   - name: libgsf
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libgsf/1.14/libgsf-1.14.50.tar.xz
-        sha256: 6e6c20d0778339069d583c0d63759d297e817ea10d0d897ebbe965f16e2e8e52
+        url: https://download.gnome.org/sources/libgsf/1.14/libgsf-1.14.55.tar.xz
+        sha256: 74d60abba15bd3ea5ad17da5b924d8e36f649a25c3dc77adbabd2a3628a02131
 
   - name: opensp
     config-opts:
@@ -59,8 +58,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: http://downloads.sourceforge.net/project/grisbi/grisbi%20stable/3.0.x/3.0.3/grisbi-3.0.3.tar.bz2
-        sha256: 3bc1c630a758a4b5a76116015002a9b477b495203110481ff41f3674c1df4797
+        url: http://downloads.sourceforge.net/project/grisbi/grisbi%20stable/3.0.x/3.90.1/grisbi-3.90.1.tar.xz
+        sha256: 2d7632b4d07189d9189d8d2c7caded309ff0622405234d1886217a7dca9882a8
       - type: file
         path: metainfo.patch
     post-install:
