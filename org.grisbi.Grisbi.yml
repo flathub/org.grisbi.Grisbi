@@ -31,6 +31,10 @@ modules:
       - type: archive
         url: https://download.gnome.org/sources/libgsf/1.14/libgsf-1.14.55.tar.xz
         sha256: 74d60abba15bd3ea5ad17da5b924d8e36f649a25c3dc77adbabd2a3628a02131
+        x-checker-data:
+          type: anitya
+          project-id: 1980
+          url-template: https://download.gnome.org/sources/libgsf/$major.$minor/libgsf-$version.tar.xz
 
   - name: opensp
     config-opts:
@@ -39,6 +43,10 @@ modules:
       - type: archive
         url: http://downloads.sourceforge.net/project/openjade/opensp/1.5.2/OpenSP-1.5.2.tar.gz
         sha256: 57f4898498a368918b0d49c826aa434bb5b703d2c3b169beb348016ab25617ce
+        x-checker-data:
+          type: anitya
+          project-id: 377818
+          url-template: http://downloads.sourceforge.net/project/openjade/opensp/$version/OpenSP-$version.tar.gz
       - type: shell
         commands:
           - autoreconf -vfi
@@ -53,6 +61,10 @@ modules:
       - type: archive
         url: https://github.com/libofx/libofx/archive/refs/tags/0.10.9.tar.gz
         sha256: ea9fa07759622ecc7f25b637fa8fb34d587af80607ca4389d25966a6a4f94ab9
+        x-checker-data:
+          type: anitya
+          project-id: 7309
+          url-template: https://github.com/libofx/libofx/archive/refs/tags/$version.tar.gz
 
   - name: grisbi
     buildsystem: autotools
@@ -60,6 +72,10 @@ modules:
       - type: archive
         url: http://downloads.sourceforge.net/project/grisbi/grisbi%20stable/3.0.x/3.90.1/grisbi-3.90.1.tar.xz
         sha256: 2d7632b4d07189d9189d8d2c7caded309ff0622405234d1886217a7dca9882a8
+        x-checker-data:
+          type: anitya
+          project-id: 8916
+          url-template: http://downloads.sourceforge.net/project/grisbi/grisbi%20stable/$major.0.x/$version/grisbi-$version.tar.xz
       - type: file
         path: metainfo.patch
     post-install:
