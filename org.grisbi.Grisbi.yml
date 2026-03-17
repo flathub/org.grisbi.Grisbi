@@ -1,6 +1,6 @@
 app-id: org.grisbi.Grisbi
 runtime: org.gnome.Platform
-runtime-version: "49"
+runtime-version: '49'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.gnome.Sdk.Locale
@@ -19,7 +19,7 @@ finish-args:
   - --filesystem=home
 
 cleanup:
-  - '/include'
+  - /include
   - '*.a'
 
 modules:
@@ -29,8 +29,8 @@ modules:
   - name: libgsf
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libgsf/1.14/libgsf-1.14.55.tar.xz
-        sha256: 74d60abba15bd3ea5ad17da5b924d8e36f649a25c3dc77adbabd2a3628a02131
+        url: https://download.gnome.org/sources/libgsf/1.14/libgsf-1.14.56.tar.xz
+        sha256: 9d21d30df1d12feaf03e181afd6067f65e3048ab69cb6ad174a3c5b72b92d297
         x-checker-data:
           type: anitya
           project-id: 1980
@@ -82,7 +82,8 @@ modules:
       - mv /app/share/metainfo/grisbi.metainfo.xml /app/share/metainfo/org.grisbi.Grisbi.metainfo.xml
       # https://github.com/grisbi/grisbi/pull/73
       - sed -i -e 's,<_,<,g;s,</_,</,g' /app/share/metainfo/org.grisbi.Grisbi.metainfo.xml
-      - sed -i -e '/<description>/i\  <developer_name>Grisbi Team</developer_name>' /app/share/metainfo/org.grisbi.Grisbi.metainfo.xml
+      - sed -i -e '/<description>/i\  <developer_name>Grisbi Team</developer_name>'
+        /app/share/metainfo/org.grisbi.Grisbi.metainfo.xml
       # Add the latest release
       - patch /app/share/metainfo/org.grisbi.Grisbi.metainfo.xml < metainfo.patch
       - mv /app/share/mime/packages/grisbi.xml /app/share/mime/packages/org.grisbi.Grisbi.xml
