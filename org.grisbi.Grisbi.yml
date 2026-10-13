@@ -35,8 +35,8 @@ modules:
   - name: libgsf
     sources:
       - type: archive
-        url: https://download.gnome.org/sources/libgsf/1.14/libgsf-1.14.58.tar.xz
-        sha256: 06e07ea12b7a52b9e316faddfecb640b1717a4875c59f0efb3b0cec1e2ccf35a
+        url: https://download.gnome.org/sources/libgsf/1.14/libgsf-1.14.60.tar.xz
+        sha256: 83e12c36a099a8a7019bf425e2c24af66eeb2ef5874251e694431a07d9805dae
         x-checker-data:
           type: anitya
           project-id: 1980
@@ -76,8 +76,8 @@ modules:
     buildsystem: autotools
     sources:
       - type: archive
-        url: http://downloads.sourceforge.net/project/grisbi/grisbi%20stable/3.0.x/3.90.1/grisbi-3.90.1.tar.xz
-        sha256: 2d7632b4d07189d9189d8d2c7caded309ff0622405234d1886217a7dca9882a8
+        url: http://downloads.sourceforge.net/project/grisbi/grisbi%20stable/3.0.x/3.92.0/grisbi-3.92.0.tar.xz
+        sha256: 917426cad929543f415d7906575a5d0b1be29ef3b31d801a74b1ea081750cc41
         x-checker-data:
           type: anitya
           project-id: 8916
